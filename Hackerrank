@@ -1,0 +1,15 @@
+<h1>Finding the percentage</h1>
+
+The provided code stub will read in a dictionary containing key/value pairs of name:[marks] for a list of students. Print the average of the marks array for the student name provided, showing 2 places after the decimal.
+
+def avg(lst):
+    return (lst[0]+lst[1]+lst[2])/3
+n=int(input())
+student_marks={}
+for i in range(n):
+    name,*line=input().split()
+    scores=list(map(float,line))
+    student_marks[name] = scores
+query_name = input()
+a=avg(student_marks[query_name])
+print("%.2f"%a)
